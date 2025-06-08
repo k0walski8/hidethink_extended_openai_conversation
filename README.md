@@ -1,4 +1,6 @@
-# Extended OpenAI Conversation
+# HideThink Extended OpenAI Conversation
+A fork of the [Extended OpenAI Conversation](https://github.com/jekalmin/extended_openai_conversation) which doesn't output <think> tags in to the conversation.
+
 This is custom component of Home Assistant.
 
 Derived from [OpenAI Conversation](https://www.home-assistant.io/integrations/openai_conversation/) with some new features such as call-service.
