@@ -73,7 +73,7 @@ from .exceptions import (
     ParseArgumentsFailed,
     TokenLengthExceededError,
 )
-from .helpers import get_function_executor, is_azure, validate_authentication
+from .helpers import get_function_executor, is_azure, validate_authentication, strip_think_blocks
 from .services import async_setup_services
 
 _LOGGER = logging.getLogger(__name__)
@@ -230,7 +230,8 @@ class OpenAIAgent(conversation.AbstractConversationAgent):
         )
 
         intent_response = intent.IntentResponse(language=user_input.language)
-        intent_response.async_set_speech(query_response.message.content)
+        filtered_content = strip_think_blocks(query_response.message.content)
+        intent_response.async_set_speech(filtered_content)
         return conversation.ConversationResult(
             response=intent_response, conversation_id=conversation_id
         )
