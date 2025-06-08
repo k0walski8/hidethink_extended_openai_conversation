@@ -1,8 +1,6 @@
 # HideThink Extended OpenAI Conversation
 A fork of the [Extended OpenAI Conversation](https://github.com/jekalmin/extended_openai_conversation) which doesn't output <think> tags in to the conversation.
 
-This is custom component of Home Assistant.
-
 Derived from [OpenAI Conversation](https://www.home-assistant.io/integrations/openai_conversation/) with some new features such as call-service.
 
 ## Additional Features
@@ -18,7 +16,7 @@ Extended OpenAI Conversation uses OpenAI API's feature of [function calling](htt
 Since OpenAI models already know how to call service of Home Assistant in general, you just have to let model know what devices you have by [exposing entities](https://github.com/jekalmin/extended_openai_conversation#preparation)
 
 ## Installation
-1. Install via registering as a custom repository of HACS or by copying `extended_openai_conversation` folder into `<config directory>/custom_components`
+1. Install via registering as a custom repository of HACS or by copying `hidethink_extended_openai_conversation` folder into `<config directory>/custom_components`
 2. Restart Home Assistant
 3. Go to Settings > Devices & Services.
 4. In the bottom right corner, select the Add Integration button.
@@ -27,7 +25,7 @@ Since OpenAI models already know how to call service of Home Assistant in genera
     - Specify "Base Url" if using OpenAI compatible servers like Azure OpenAI (also with APIM), LocalAI, otherwise leave as it is.
 6. Go to Settings > [Voice Assistants](https://my.home-assistant.io/redirect/voice_assistants/).
 7. Click to edit Assistant (named "Home Assistant" by default).
-8. Select "Extended OpenAI Conversation" from "Conversation agent" tab.
+8. Select "HideThink OpenAI Conversation" from "Conversation agent" tab.
     <details>
 
     <summary>guide image</summary>
@@ -76,7 +74,7 @@ Options include [OpenAI Conversation](https://www.home-assistant.io/integrations
 ### Functions
 
 #### Supported function types
-- `native`: built-in function provided by "extended_openai_conversation".
+- `native`: built-in function provided by "hidethink_extended_openai_conversation".
   - Currently supported native functions and parameters are:
     - `execute_service`
       - `domain`(string): domain to be passed to `hass.services.async_call`
@@ -622,5 +620,5 @@ In order to monitor logs of API requests and responses, add following config to 
 ```yaml
 logger:
   logs:
-    custom_components.extended_openai_conversation: info
+    custom_components.hidethink_extended_openai_conversation: info
 ```
