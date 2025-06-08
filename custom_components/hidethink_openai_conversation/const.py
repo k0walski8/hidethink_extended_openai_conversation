@@ -1,7 +1,7 @@
 """Constants for the Extended OpenAI Conversation integration."""
 
-DOMAIN = "extended_openai_conversation"
-DEFAULT_NAME = "Extended OpenAI Conversation"
+DOMAIN = "hidethink_extended_openai_conversation"
+DEFAULT_NAME = "HideThink OpenAI Conversation"
 CONF_ORGANIZATION = "organization"
 CONF_BASE_URL = "base_url"
 DEFAULT_CONF_BASE_URL = "https://api.openai.com/v1"
@@ -9,8 +9,8 @@ CONF_API_VERSION = "api_version"
 CONF_SKIP_AUTHENTICATION = "skip_authentication"
 DEFAULT_SKIP_AUTHENTICATION = False
 
-EVENT_AUTOMATION_REGISTERED = "automation_registered_via_extended_openai_conversation"
-EVENT_CONVERSATION_FINISHED = "extended_openai_conversation.conversation.finished"
+EVENT_AUTOMATION_REGISTERED = "automation_registered_via_hidethink_extended_openai_conversation"
+EVENT_CONVERSATION_FINISHED = "hidethink_extended_openai_conversation.conversation.finished"
 
 CONF_PROMPT = "prompt"
 DEFAULT_PROMPT = """I want you to act as smart home manager of Home Assistant.
@@ -87,7 +87,7 @@ DEFAULT_CONF_FUNCTIONS = [
 CONF_ATTACH_USERNAME = "attach_username"
 DEFAULT_ATTACH_USERNAME = False
 CONF_USE_TOOLS = "use_tools"
-DEFAULT_USE_TOOLS = False
+DEFAULT_USE_TOOLS = True
 CONF_CONTEXT_THRESHOLD = "context_threshold"
 DEFAULT_CONTEXT_THRESHOLD = 13000
 CONTEXT_TRUNCATE_STRATEGIES = [{"key": "clear", "label": "Clear All Messages"}]
